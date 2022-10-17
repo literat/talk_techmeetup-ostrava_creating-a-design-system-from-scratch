@@ -25,28 +25,65 @@
             [Tomas Litera](https://literat.dev)
 
             <img src="static/lmc-logo.png" width="150" />
+
+            <aside class="notes">
+              - pozdravit
+              - představit se
+              - Jak jsme vytvářeli design systém od píky a co jsme se naučili
+            </aside>
+
             ---
             ## Context
+
+            <aside class="notes">
+              - než začnu, tak chci celou tuhle přednášku uvést do správného kontextu
+              - takže nejprve něco o mě
+            </aside>
+
             ---
             ### 🙋‍♂️ Something about me
-            ---
+
             <p class="fragment">started with PHP with little bit of JavaScript</p>
             <p class="fragment">worked with AWS and Serverless</p>
             <p class="fragment">played with Node.js and React</p>
             <p class="fragment">now working on a Design System</p>
             <p class="fragment">=> Fullstack Pirate</p>
 
+            <aside class="notes">
+              - začínal jsem s PHP a javascriptem
+              - pracoval jsem s AWS a Serverless
+              - hrál jsem s Node.js a Reactem
+              - a teď vytvářím design systém, o kterém jsem ještě minulý rok nic nevěděl
+              - takže se tak trochu považuji za fullstack piráta
+            </aside>
+
             ---
 
             ### 👨‍👨‍👦‍👦 Something about team
 
-            <img src="static/team.png" size="75%" />
+            <img src="static/team.png" />
+
+            <aside class="notes">
+              - teď už trochu víc k tématu
+              - to, o čem tu budu mluvit není jenom moje práce
+              - je to práce celého týmu lidí
+              - možná některé poznáváte ;-)
+            </aside>
 
             ---
 
             ### 🛠️ Something about Techstack
 
-            <img src="static/tech-stack.png" size="85%" />
+            <img src="static/tech-stack.png" />
+
+            <aside class="notes">
+              - taky bych chtěl zmínit na úvod pár technikálií
+              - celý design system vytváříme jako open source
+              - a za pomoci aktuálního stacku technologií
+              - jako třeba Nx + Lerna (ano, máme monorepo)
+              - typescript + react
+              - php + twig (jo, máme komponenty pro PHP, ale o tom později)
+            </aside>
 
             ---
 
@@ -54,17 +91,36 @@
 
             > Short story about what I have learned during a development of Design System
 
+            <aside class="notes">
+              - a o čem to tedy bude?
+              - o tom, co jsem se já jako vývojář naučil o vytváření design systémů
+              - tak jdeme na to
+            </aside>
+
             ---
 
             <img src="static/youtube-danisko.png" />
 
-            <Resource>
-              <Link to="https://www.youtube.com/embed/PaSwiE5UQA4" />
-            </Resource>
+            <a href="https://www.youtube.com/embed/PaSwiE5UQA4">https://www.youtube.com/embed/PaSwiE5UQA4</a>
+
+            <aside class="notes">
+              - pro začátek: tohle je filip daniško
+              - a minulý rok mluvil na Front konferenci o škálování design systémů
+              - super vstupní bod do problematiky
+              - i my s ním začali
+            </aside>
 
             ---
 
-            <img src="static/design-system-circels.svg" size="45%" />
+            <img src="static/design-system-circels.svg" />
+
+            <aside class="notes">
+              - jenže filip mluvil o analýzách a měření a dalších věcech
+              - tam my ještě nejsem
+              - my se pohybujeme v tom menším kruhu
+              - dokumentace, tooling a kód
+              - a o tom to dnes primárně bude
+            </aside>
 
             ---
 
@@ -72,7 +128,17 @@
 
             <p class="fragment">demand for new product design</p>
             <p class="fragment">demand for product redesigns</p>
-            <p class="fragment">demand for shareable components in design</p>
+            <p class="fragment">now</p>
+            <p class="fragment">yesterday was late</p>
+            <p class="fragment">fast and furious 🏎</p>
+
+            <aside class="notes">
+              - takže jak to začalo?
+              - poptávkou pro produktových designech
+              - poptávkou po redesignech produktů
+              - ideálně hned
+              - včera bylo pozdě
+            </aside>
 
             ---
 
@@ -80,9 +146,21 @@
 
             <img src="static/products.png" size="85%" />
 
+            <aside class="notes">
+              - super, tak jako proč ne
+              - LMC jako spoelčnost má ale spoustu produktů
+              - tady vidíte některé z nich
+              - jobsy, práce, atmoskop, seduo, robot arnold, atd..
+            </aside>
+
             ---
 
             #### 🎨 Existing UI libraries
+
+            <aside class="notes">
+              - tyhle produkty mají naštěstí už i svoje UI knihovny
+              - takže je na čem stavět
+            </aside>
 
             ---
 
@@ -106,13 +184,30 @@
 
             ### 💫 Lessons Learned
 
+            <aside class="notes">
+              - tak a těď konečně k těm věcem, co jsem se na základě toho všeho naučili
+            </aside>
+
             ---
 
             ### 🤹‍♂️ The Multibrand
 
+            <aside class="notes">
+              - děláme multibrand
+              - víte co to je?
+              - a znáte třeba automobilku Volkswagen?
+            </aside>
+
             ---
 
-            <img src="static/volkswagen-group.png" size="75%" />
+            <img src="static/volkswagen-group.png" />
+
+            <aside class="notes">
+              - tohle je multibrand
+              - jedna firma
+              - více značek
+              - každá s vlastním designem
+            </aside>
 
             ---
 
@@ -131,9 +226,16 @@
             - Nucleus
             - Orbit
 
-            <Resource>
-              <Link to="https://designsystemsrepo.com/design-systems/" />
-            </Resource>
+            <a href="https://designsystemsrepo.com/design-systems/">https://designsystemsrepo.com/design-systems/</a>
+
+            <aside class="notes">
+              - abychom pochopili, co to vlastně děláme, tak jsme se museli vrátit na začátek
+              - co je to jednoduché, co dělají všichni?
+              - single brand
+              - jedna firma, jeden design, jedna technologie
+              - všechny tyhle design systémy jsou tak dělané
+              - určitě některé z nich znáte
+            </aside>
 
             ---
 
@@ -145,17 +247,30 @@
             <p class="fragment">switch to high contrast</p>
             <p class="fragment">repaint the component</p>
 
+            <aside class="notes">
+              - ok, ale spousta z nich se dá přeci přebarvovat
+              - jasně, "theming"
+              - změna světlého a tmavého módu
+              - zvyšování kontrastu
+              - nebo prostě přebarvení komponenty
+              - to ale stále není multibrand
+            </aside>
+
             ---
 
             #### 🏅 The real multi-brand
 
             Multiple products with multiple designs
 
-            <img src="static/gel.png" size="65%" />
+            <img src="static/gel.png" />
 
-            <Resource>
-              <Link to="https://gel.westpacgroup.com.au/" />
-            </Resource>
+            <a href="https://gel.westpacgroup.com.au/">https://gel.westpacgroup.com.au/</a>
+
+            <aside class="notes">
+              - opravdový multibrand vám umožní změnit nejen barvy, ale kompletně vzhled
+              - odsazení, velikosti písma, atd
+              - jakop například tady GEL
+            </aside>
 
             ---
 
@@ -168,6 +283,17 @@
             > The key information is that for design system to work, it has to be product development and it has to be approached that way.
             > It's a long-term journey that doesn't end.
 
+            <aside class="notes">
+              - to bychom měli multibrand
+              - dále už se dostáváme k samotnému vývoji
+              - hlavní informaci, kterou jsme si odnesli z filipovi přednášky
+              - je že DS musí být produkt
+              - ne projekt, ale reálný produktový vývoj se vším všudy
+              - protože to nebude hned
+              - budete ho rozvíjet, udržovat a měnit společně s vašimi dalšími produkty
+              - potřebuje prostě vlastní tým vývojářu, manažera a všechno to kolem
+            </aside>
+
             ---
 
             #### 👩‍🎨 Design vs Development 👨‍💻
@@ -177,49 +303,52 @@
             <p class="fragment">Design => UI library</p>
             <p class="fragment">Close cooperation of Designer and Developer</p>
 
+            <aside class="notes">
+              - dál a víc na dřeň
+              - v DS se potkávají dva proudy, které spolu musí spolupracovat
+              - design a vývoj
+              - a proto DS není jenom ledajaká knihovna, kterou vidí vývojářy
+              - ale je to celý komplenxní systém, který designer nejdřív musel vymyslet a nakreslit
+              - a až potom se dal přetavit do kódu
+              - od začátku a do konce je to o úzké spolupráci designéra s vývojářem
+              - a jakmile k tomu dojde, začnou se dít magické věci
+            </aside>
+
             ---
 
             💬
 
             > For the first time, there was a “holistic view” of the elements, of all their possible combinations, and it was “easy” for me and my colleagues to spot inconsistencies, detect side effects, and find duplications and common patterns.
 
-            <Resource>
-              <Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-1/" />
-            </Resource>
+            <a href="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-1/">http://www.didoo.net/2018/02/from-zero-to-cosmos-part-1/</a>
+            <a href="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-2/">http://www.didoo.net/2018/02/from-zero-to-cosmos-part-2/</a>
+            <a href="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-3/">http://www.didoo.net/2018/02/from-zero-to-cosmos-part-3/</a>
+
+            <aside class="notes">
+              - poprvé začnete vidět elementy a jejich kombinace
+              - duplikace a nekonzistence v designu
+              - společné vzory
+              - začnete si všímat hraničních stavů
+              - znovupoužitelnosti
+              - a velmi brzy začnete vnímat změny ve visuální konzistenci
+              - celkový pocit z lepší kvality aplikace
+              - a i zrychlení vývoje
+            </aside>
 
             ---
-
-            💬
-
-            > We were the ones telling designers that sometimes their designs were not consistent, or there were similar UI elements that could be reused instead of creating new ones, or that they were not taking into account some edge cases or problems with different languages.
-
-            <Resource>
-              <Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-2/" />
-            </Resource>
-
-            ---
-
-            💬
-
-            > Everyone was starting to see visible, tangible improvements: modularisation of components, reusability of code & components, increased speed of development, and a better visual consistency & overall quality of the application.
-
-            <Resource>
-              <Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-3/" />
-            </Resource>
-
-            ---
-
-            <CenterLayout>
 
             ### 📚 Documentation
 
-            </CenterLayout>
+            <aside class="notes">
+              - a to ještě není konec
+              - tohle všechno bylo potřeba zdokumentovat
+            </aside>
 
             ---
 
-            #### 💥 Supernova
+            #### Design-System-As-A-Service
 
-            **design-system-as-a-service platform**
+            💥 Supernova platform
 
             <p class="fragment">multibrand support</p>
             <p class="fragment">integration with Figma</p>
@@ -227,33 +356,36 @@
             <p class="fragment">component health status page</p>
             <p class="fragment">exporters</p>
 
-            <Resource>
-              <Link to="http://supernova.io/" />
-            </Resource>
+            <a href="http://supernova.io/">http://supernova.io/</a>
+
+            <aside class="notes">
+              - dneska už jsou služby snad na vše
+              - i na design system
+              - v tomhle ohledu je tu ale jediná Supernova
+              - a má všechno, co potřebujeme
+            </aside>
 
             ---
 
-            <img src="static/supernova.png" size="65%" />
+            <img src="static/supernova.png" />
+
+            <aside class="notes">
+              - takže do ní napojíte datové zdroje a voilá
+            </aside>
 
             ---
 
             #### 🚑 Component Health Status
 
-            <img src="static/health-status.png" size="65%" />
+            <img src="static/health-status.png" />
 
-            ---
-
-            #### ❗
-
-            Great page but...
-
-            <ul>
-              <Appear>
-                <li>manuall updates</li>
-                <li>no automatization</li>
-                <li>lack of rules or definitions (healthy vs unhealthy)</li>
-              </Appear>
-            </ul>
+            <aside class="notes">
+              - seznam komponent s jejich stavem
+              - super stránka, ale má to i své nevýhody
+              - manuální editace
+              - žádná automatizace
+              - chybí definice pravidel, kdy a za jakých podmínek jsou komponenty v jakém stavu
+            </aside>
 
             ---
 
@@ -268,35 +400,33 @@
 
             > Designers are responsible for release of design updates aka "release & publish"
 
+            <aside class="notes">
+              - ale za to má exportéry
+              - a tak designér je přímo zodpovědný za změny v designu
+              - protože ty se automagicky dostávají rovnou do repozitáře s komponentami
+              - děláme z designára tak trochu vývojáře
+            </aside>
+
             ---
 
-            <img src="static/figma-release.png" size="75%" />
+            <img src="static/figma-release.png" />
+
+            <aside class="notes">
+              - a nutíme je verzovat a publikovat
+            </aside>
 
             ---
 
-            <CenterLayout>
 
             ### 🏗️ Architecture
-
-            </CenterLayout>
 
             ---
 
             #### Common UI library
 
-            <CenterLayout>
-
             Spirit Design System => Jobs Design System
 
-            </CenterLayout>
-
-            <CenterLayout>
             Common UI library => Product UI library
-            </CenterLayout>
-
-            <Resource>
-              <Link to="https://github.com/lmc-eu/spirit-design-system" />
-            </Resource>
 
             ---
 
@@ -322,16 +452,6 @@
 
             ---
 
-            #### JSX in Twig templates
-
-            <img src="static/twigx-syntax.png" size="80%" />
-
-            ---
-
-            <img src="static/twigx-bundle.png" size="80%" />
-
-            ---
-
             #### 🚦 Style/System Props
 
             <img src="static/system-props.png" />
@@ -341,23 +461,27 @@
             - UNSAFE_className
             - UNSAFE_style
 
-            <Resource>
-              <Link to="https://react-spectrum.adobe.com/react-spectrum/styling.html" />
-            </Resource>
+            <a href="https://react-spectrum.adobe.com/react-spectrum/styling.html">https://react-spectrum.adobe.com/react-spectrum/styling.html</a>
+
 
             ---
 
-            <!-- #### 🚀 Zero to Hero configuration
+            #### JSX in Twig templates
 
-            <img src="static/vite.jpg" />
+            <img src="static/twigx-syntax.png" />
 
             ---
 
-            <img src="static/demo.png" size="80%" />
+            <img src="static/twigx-bundle.png" />
 
-            --- -->
+            ---
 
             ### 🏎️ Back to the Future
+
+            <aside class="notes">
+              - a co na nás tedy ještě čeká v budoucnu
+              - prakticky všechno, o čem mluvil filip ve své přednášce
+            </aside>
 
             ---
 
@@ -380,9 +504,18 @@
             <p class="fragment">Styled components</p>
             <p class="fragment">design tokens exported in JavaScript</p>
 
+            <aside class="notes">
+              - a do toho ještě další technologické výzvy v podobě...
+            </aside>
+
             ---
 
             > Design System is a product that supports other Products and let them grow.
+
+            <aside class="notes">
+              - a co si z toho všechno na závěr odnést
+              - že DS je produkt, který podporuje ostatní produkty v jejich růstu, tak se k němu i tak chovejme
+            </aside>
 
             ---
 
@@ -390,9 +523,16 @@
 
             <a href="https://techmeetup-design-system-from-scratch.netlify.app/">https://techmeetup-design-system-from-scratch.netlify.app/</a>
 
+            <aside class="notes">
+              - děkuji za pozornost
+            </aside>
+
             ---
 
-            <img src="static/spirit.png" size="80%" />
+            <img src="static/spirit.png" />
+
+            <a href="https://github.com/lmc-eu/spirit-design-system">https://github.com/lmc-eu/spirit-design-system</a>
+
           </textarea>
         </section>
       </div>
