@@ -1,489 +1,418 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/white.css">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown>
-					<textarea data-template>
-						<img src="static/frontendisti.jpg" width="150" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-						# Creating a Design System from Scratch: Tips and Tricks from a developer
+    <title>Creating a Design System from Scratch: Lessons learned</title>
 
-						[Tomas Litera](https://literat.dev)
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
 
-						<img src="static/lmc-logo.png" width="150" />
-						---
-						## Context
-						---
-						### 🙋‍♂️ Something about me
-						---
-						<ul>
-							<Appear>
-								<li>started with PHP with little bit of JavaScript</li>
-								<li>worked with AWS and Serverless</li>
-								<li>played with Node.js and React</li>
-								<li>now working on a Design System</li>
-								<li>=> Fullstack Pirate</li>
-							</Appear>
-						</ul>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            <img src="static/techmeetup-logo-dark.png" width="150" />
 
-						---
+            ## Creating a Design System from Scratch: Lessons learned
 
-						### 👨‍👨‍👦‍👦 Something about team
+            [Tomas Litera](https://literat.dev)
 
-						<img src="static/team.png" size="75%" />
+            <img src="static/lmc-logo.png" width="150" />
+            ---
+            ## Context
+            ---
+            ### 🙋‍♂️ Something about me
+            ---
+            <p class="fragment">started with PHP with little bit of JavaScript</p>
+            <p class="fragment">worked with AWS and Serverless</p>
+            <p class="fragment">played with Node.js and React</p>
+            <p class="fragment">now working on a Design System</p>
+            <p class="fragment">=> Fullstack Pirate</p>
 
-						- Michal Klimt as a product owner and UX/Design Manager
-						- Tomas Litera, me, as a Design System Lead
-						- Adam Kudrna as a UI Developer
-						- Jan Kryšpín as a UI Developer
-						- Tomáš Sychra as a Software Developer
-						- Vojta Milerský as a UI Developer
-						- Kateřina Dlouhá as a Jobs Design System Owner
-						- Tomáš Janíček as a Software Developer
+            ---
 
-						---
+            ### 👨‍👨‍👦‍👦 Something about team
 
-						### 🛠️ Something about Techstack
+            <img src="static/team.png" size="75%" />
 
-						<img src="static/tech-stack.png" size="85%" />
+            ---
 
-						- GitHub
-						- Lerna + Nx => Monorepo
-						- HTML
-						- Sass
-						- Javascript
-						- Typescript
-						- React
-						- PHP
-						- Symfony
-						- Twig
-						- Storybook
-						- Supernova
-						- Netlify
-						- Vite
+            ### 🛠️ Something about Techstack
 
-						---
+            <img src="static/tech-stack.png" size="85%" />
 
-						## What it is going to be about
+            ---
 
-						> Short story about what I have learned during a development of Design System
+            ## What it is going to be about
 
-						---
+            > Short story about what I have learned during a development of Design System
 
-						<img src="static/youtube-danisko.png" size="85%" />
+            ---
 
-						<Resource>
-							<Link to="https://www.youtube.com/embed/PaSwiE5UQA4" />
-						</Resource>
+            <img src="static/youtube-danisko.png" />
 
-						---
+            <Resource>
+              <Link to="https://www.youtube.com/embed/PaSwiE5UQA4" />
+            </Resource>
 
-						<img src="static/design-system-circels.svg" size="45%" />
+            ---
 
-						---
+            <img src="static/design-system-circels.svg" size="45%" />
 
-						### 🎬 How it started
+            ---
 
-						<ul>
-							<Appear>
-								<li>demand for new product design</li>
-								<li>demand for product redesigns</li>
-								<li>demand for shareable components in design</li>
-							</Appear>
-						</ul>
+            ### 🎬 How it started
 
-						---
+            <p class="fragment">demand for new product design</p>
+            <p class="fragment">demand for product redesigns</p>
+            <p class="fragment">demand for shareable components in design</p>
 
-						#### Portfolio of products
+            ---
 
-						<img src="static/products.png" size="85%" />
+            #### Portfolio of products
 
-						---
+            <img src="static/products.png" size="85%" />
 
-						#### 🎨 Existing UI libraries
+            ---
 
-						---
+            #### 🎨 Existing UI libraries
 
-						##### Jobs UI
+            ---
 
-						<img src="static/jobs-ui.png" size="85%" />
+            ##### Jobs UI
 
-						---
+            <img src="static/jobs-ui.png" size="85%" />
 
-						##### Seduo UI
+            ---
 
-						<img src="static/seduo-ui.png" size="85%" />
+            ##### Seduo UI
 
-						---
+            <img src="static/seduo-ui.png" size="85%" />
 
-						##### Teamio UI
+            ---
 
-						<img src="static/teamio-ui.png" size="85%" />
+            ##### Teamio UI
 
-						---
+            <img src="static/teamio-ui.png" size="85%" />
 
-						<CenterLayout>
+            ---
 
-						### 🤹‍♂️ The Multibrand
+            ### 💫 Lessons Learned
 
-						</CenterLayout>
+            ---
 
-						---
+            ### 🤹‍♂️ The Multibrand
 
-						<img src="static/multibrand.png" size="75%" />
+            ---
 
-						---
+            <img src="static/volkswagen-group.png" size="75%" />
 
-						<img src="static/volkswagen-group.png" size="75%" />
+            ---
 
-						---
+            #### 🥇 Single brand
 
-						#### 🥇 Single brand
+            **One product, one design, one technology**
 
-						**One product, one design, one technology**
+            - Apple Human Interface Design
+            - Google Material Design
+            - Microsoft Fluent
+            - Shopify Polaris
+            - Ant Design
+            - IBM Carbon
+            - Adobe Spectrum
+            - Attlasian Design System
+            - Nucleus
+            - Orbit
 
-						- Apple Human Interface Design
-						- Google Material Design
-						- Microsoft Fluent
-						- Shopify Polaris
-						- Ant Design
-						- IBM Carbon
-						- Adobe Spectrum
-						- Attlasian Design System
-						- Nucleus
-						- Orbit
+            <Resource>
+              <Link to="https://designsystemsrepo.com/design-systems/" />
+            </Resource>
 
-						<Resource>
-							<Link to="https://designsystemsrepo.com/design-systems/" />
-						</Resource>
+            ---
 
-						---
+            #### 💅 Theming
 
-						#### 💅 Theming
+            Multiple "themes" of one design
 
-						Multiple "themes" of one design
+            <p class="fragment">light or dark mode</p>
+            <p class="fragment">switch to high contrast</p>
+            <p class="fragment">repaint the component</p>
 
-						<ul>
-							<Appear>
-								<li>light or dark mode</li>
-								<li>switch to high contrast</li>
-								<li>repaint the component</li>
-							</Appear>
-						</ul>
+            ---
 
-						---
+            #### 🏅 The real multi-brand
 
-						#### 🏅 The real multi-brand
+            Multiple products with multiple designs
 
-						Multiple products with multiple designs
+            <img src="static/gel.png" size="65%" />
 
-						<img src="static/gel.png" size="65%" />
+            <Resource>
+              <Link to="https://gel.westpacgroup.com.au/" />
+            </Resource>
 
-						<Resource>
-							<Link to="https://gel.westpacgroup.com.au/" />
-						</Resource>
+            ---
 
-						---
+            #### Product vs Project
 
-						<CenterLayout>
+            The design system must not be a project.
 
-						### 💫 Tips and Tricks
+            **It MUST be a product.**
 
-						</CenterLayout>
+            > The key information is that for design system to work, it has to be product development and it has to be approached that way.
+            > It's a long-term journey that doesn't end.
 
-						---
+            ---
 
-						#### Product vs Project
+            #### 👩‍🎨 Design vs Development 👨‍💻
 
-						The design system must not be a project.
+            <p class="fragment">Design System vs UI library</p>
+            <p class="fragment">UX/Designer vs Developer</p>
+            <p class="fragment">Design => UI library</p>
+            <p class="fragment">Close cooperation of Designer and Developer</p>
 
-						**It MUST be a product.**
+            ---
 
-						> The key information is that for design system to work, it has to be product development and it has to be approached that way.
-						> It's a long-term journey that doesn't end.
+            💬
 
-						---
+            > For the first time, there was a “holistic view” of the elements, of all their possible combinations, and it was “easy” for me and my colleagues to spot inconsistencies, detect side effects, and find duplications and common patterns.
 
-						#### 👩‍🎨 Design vs Development 👨‍💻
+            <Resource>
+              <Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-1/" />
+            </Resource>
 
-						<ul>
-							<Appear>
-								<li>Design System vs UI library</li>
-								<li>UX/Designer vs Developer</li>
-								<li>Design => UI library</li>
-								<li>Close cooperation of Designer and Developer</li>
-							</Appear>
-						</ul>
+            ---
 
-						---
+            💬
 
-						💬
+            > We were the ones telling designers that sometimes their designs were not consistent, or there were similar UI elements that could be reused instead of creating new ones, or that they were not taking into account some edge cases or problems with different languages.
 
-						> For the first time, there was a “holistic view” of the elements, of all their possible combinations, and it was “easy” for me and my colleagues to spot inconsistencies, detect side effects, and find duplications and common patterns.
+            <Resource>
+              <Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-2/" />
+            </Resource>
 
-						<Resource>
-							<Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-1/" />
-						</Resource>
+            ---
 
-						---
+            💬
 
-						💬
+            > Everyone was starting to see visible, tangible improvements: modularisation of components, reusability of code & components, increased speed of development, and a better visual consistency & overall quality of the application.
 
-						> We were the ones telling designers that sometimes their designs were not consistent, or there were similar UI elements that could be reused instead of creating new ones, or that they were not taking into account some edge cases or problems with different languages.
+            <Resource>
+              <Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-3/" />
+            </Resource>
 
-						<Resource>
-							<Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-2/" />
-						</Resource>
+            ---
 
-						---
+            <CenterLayout>
 
-						💬
+            ### 📚 Documentation
 
-						> Everyone was starting to see visible, tangible improvements: modularisation of components, reusability of code & components, increased speed of development, and a better visual consistency & overall quality of the application.
+            </CenterLayout>
 
-						<Resource>
-							<Link to="http://www.didoo.net/2018/02/from-zero-to-cosmos-part-3/" />
-						</Resource>
+            ---
 
-						---
+            #### 💥 Supernova
 
-						<CenterLayout>
+            **design-system-as-a-service platform**
 
-						### 📚 Documentation
+            <p class="fragment">multibrand support</p>
+            <p class="fragment">integration with Figma</p>
+            <p class="fragment">documentation</p>
+            <p class="fragment">component health status page</p>
+            <p class="fragment">exporters</p>
 
-						</CenterLayout>
+            <Resource>
+              <Link to="http://supernova.io/" />
+            </Resource>
 
-						---
+            ---
 
-						#### 💥 Supernova
+            <img src="static/supernova.png" size="65%" />
 
-						**design-system-as-a-service platform**
+            ---
 
-						<ul>
-							<Appear>
-								<li>multibrand support</li>
-								<li>integration with Figma</li>
-								<li>documentation</li>
-								<li>component health status page</li>
-								<li>exporters</li>
-							</Appear>
-						</ul>
+            #### 🚑 Component Health Status
 
-						<Resource>
-							<Link to="http://supernova.io/" />
-						</Resource>
+            <img src="static/health-status.png" size="65%" />
 
-						---
+            ---
 
-						<img src="static/supernova.png" size="65%" />
+            #### ❗
 
-						---
+            Great page but...
 
-						#### 🚑 Component Health Status
+            <ul>
+              <Appear>
+                <li>manuall updates</li>
+                <li>no automatization</li>
+                <li>lack of rules or definitions (healthy vs unhealthy)</li>
+              </Appear>
+            </ul>
 
-						<img src="static/health-status.png" size="65%" />
+            ---
 
-						---
+            #### 🛳 Exporters
 
-						#### ❗
+            Figma => Supernova => GitHub repository => Package => App
 
-						Great page but...
+            - design tokens
+            - icons
 
-						<ul>
-							<Appear>
-								<li>manuall updates</li>
-								<li>no automatization</li>
-								<li>lack of rules or definitions (healthy vs unhealthy)</li>
-							</Appear>
-						</ul>
+            👨‍🎨 => 👨‍💻
 
-						---
+            > Designers are responsible for release of design updates aka "release & publish"
 
-						#### 🛳 Exporters
+            ---
 
-						Figma => Supernova => GitHub repository => Package => App
+            <img src="static/figma-release.png" size="75%" />
 
-						- design tokens
-						- icons
+            ---
 
-						👨‍🎨 => 👨‍💻
+            <CenterLayout>
 
-						> Designers are responsible for release of design updates aka "release & publish"
+            ### 🏗️ Architecture
 
-						---
+            </CenterLayout>
 
-						<img src="static/figma-release.png" size="75%" />
+            ---
 
-						---
+            #### Common UI library
 
-						<CenterLayout>
+            <CenterLayout>
 
-						### 🏗️ Architecture
+            Spirit Design System => Jobs Design System
 
-						</CenterLayout>
+            </CenterLayout>
 
-						---
+            <CenterLayout>
+            Common UI library => Product UI library
+            </CenterLayout>
 
-						#### Common UI library
+            <Resource>
+              <Link to="https://github.com/lmc-eu/spirit-design-system" />
+            </Resource>
 
-						<CenterLayout>
+            ---
 
-						Spirit Design System => Jobs Design System
+            #### Packages
 
-						</CenterLayout>
+            Monorepo
 
-						<CenterLayout>
-						Common UI library => Product UI library
-						</CenterLayout>
+            <p class="fragment">design-tokens - <i>design variables</i></p>
+            <p class="fragment">icons - <i>svg assets and react icons</i></p>
+            <p class="fragment">web - <i>styles and JS functions</i></p>
+            <p class="fragment">web-react - <i>react components</i></p>
+            <p class="fragment">web-twig - <i>twig components</i></p>
 
-						<Resource>
-							<Link to="https://github.com/lmc-eu/spirit-design-system" />
-						</Resource>
+            ---
 
-						---
+            #### 🛡️ Typescript
 
-						#### Packages
+            **system in the system**
 
-						Monorepo
+            defining stable component API using props and types
 
-						<ul>
-							<Appear>
-								<li>design-tokens - <i>design variables</i></li>
-								<li>icons - <i>svg assets and react icons</i></li>
-								<li>web - <i>styles and JS functions</i></li>
-								<li>web-react - <i>react components</i></li>
-								<li>web-twig - <i>twig components</i></li>
-							</Appear>
-						</ul>
+            <img src="static/tests.png" />
 
-						---
+            ---
 
-						#### 🛡️ Typescript
+            #### JSX in Twig templates
 
-						**system in the system**
+            <img src="static/twigx-syntax.png" size="80%" />
 
-						defining stable component API using props and types
+            ---
 
-						<img src="static/tests.png" />
+            <img src="static/twigx-bundle.png" size="80%" />
 
-						---
+            ---
 
-						#### JSX in Twig templates
+            #### 🚦 Style/System Props
 
-						<img src="static/twigx-syntax.png" size="80%" />
+            <img src="static/system-props.png" />
 
-						---
+            Be defensive but allow custom modifications
 
-						<img src="static/twigx-bundle.png" size="80%" />
+            - UNSAFE_className
+            - UNSAFE_style
 
-						---
+            <Resource>
+              <Link to="https://react-spectrum.adobe.com/react-spectrum/styling.html" />
+            </Resource>
 
-						#### 🚦 Style/System Props
+            ---
 
-						<img src="static/system-props.png" />
+            <!-- #### 🚀 Zero to Hero configuration
 
-						Be defensive but allow custom modifications
+            <img src="static/vite.jpg" />
 
-						- UNSAFE_className
-						- UNSAFE_style
+            ---
 
+            <img src="static/demo.png" size="80%" />
 
+            --- -->
 
-						<Resource>
-							<Link to="https://react-spectrum.adobe.com/react-spectrum/styling.html" />
-						</Resource>
+            ### 🏎️ Back to the Future
 
-						---
+            ---
 
-						#### 🚀 Zero to Hero configuration
+            ### 🕵️‍♂️ Missing
 
-						<img src="static/vite.jpg" />
+            <p class="fragment">measurement</p>
+            <p class="fragment">adoption rate</p>
+            <p class="fragment">usage of components</p>
+            <p class="fragment">deprecation and health</p>
+            <p class="fragment">missing props and lack of features of the components</p>
+            <p class="fragment">candidates for a shared component and adoption to Spirit</p>
 
-						---
+            ---
 
-						<img src="static/demo.png" size="80%" />
+            ### 🤺 Technological challenges
 
-						---
+            <p class="fragment">CSS-in-JS</p>
+            <p class="fragment">React Native Apps</p>
+            <p class="fragment">Next.js Apps</p>
+            <p class="fragment">Styled components</p>
+            <p class="fragment">design tokens exported in JavaScript</p>
 
-						### 🏎️ Back to the Future
+            ---
 
-						---
+            > Design System is a product that supports other Products and let them grow.
 
-						### 🕵️‍♂️ Missing
+            ---
 
-						<ul>
-							<Appear>
-								<li>measurement</li>
-								<li>adoption rate</li>
-								<li>usage of components</li>
-								<li>deprecation and health</li>
-								<li>missing props and lack of features of the components</li>
-								<li>candidates for a shared component and adoption to Spirit</li>
-							</Appear>
-						</ul>
+            # 👋
 
-						---
+            <a href="https://techmeetup-design-system-from-scratch.netlify.app/">https://techmeetup-design-system-from-scratch.netlify.app/</a>
 
-						### 🤺 Technological challenges
+            ---
 
-						<ul>
-							<Appear>
-								<li>CSS-in-JS</li>
-								<li>React Native Apps</li>
-								<li>Next.js Apps</li>
-								<li>Styled components</li>
-								<li>design tokens exported in JavaScript</li>
-							</Appear>
-						</ul>
+            <img src="static/spirit.png" size="80%" />
+          </textarea>
+        </section>
+      </div>
+    </div>
 
-						---
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-						> Design System is a product that supports other Products and let them grow.
-
-						---
-
-						# 👋
-
-						<Resource>
-							<Link to="http://creating-a-design-system-from-scratch.netlify.app/" />
-						</Resource>
-
-						---
-
-						<img src="static/spirit.png" size="80%" />
-					</textarea>
-				</section>
-			</div>
-		</div>
-
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        slideNumber: 'c/t'
+      });
+    </script>
+  </body>
 </html>
